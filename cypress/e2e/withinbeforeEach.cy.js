@@ -1,23 +1,23 @@
 describe("Tourism Login Test Cases", () => {
 
-    beforeEach(() => {
+beforeEach(() => {
   
-      cy.visit("https://nichethyself.com/tourism/home.html");
+  cy.visit("https://nichethyself.com/tourism/home.html");
   
     });
   
    
-  
-    it("within example", () => {
-  
+    
+      it("within example", () => {
+      
       cy.get("ul.nav").within((ul) => {
-  
+        
         cy.get("li").should("have.length", 9);
-  
+        
         cy.get("li").first().should("have.text", "My Account");
-  
+        
         cy.get("li").last().should("have.text", "Contact us!");
-  
+        
         cy.get("li").eq(1).should("have.text", "Flights");
   
       });

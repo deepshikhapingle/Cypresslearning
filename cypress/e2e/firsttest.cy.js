@@ -6,8 +6,9 @@ describe('template spec', () => {
     cy.get(`input[name="password"]`).type ("12345");
     cy.get(`#loginsection > form > .btn`).click() ; 
     //cy.get("#loginsection > form").submit();
-    cy.title().should("eq","My account");
-    cy.url().should("include", "myaccount.html?");
+    //cy.get(`form[name=form]button[name=submit]`).click()
+    cy.title().should("eq","My account"); // to check the page is correct we are landed on here eq means equal to
+    cy.url().should("include", "myaccount.html?");// to check the URL is correct - includes - last line of the URL not user name and password
     
   })
 
