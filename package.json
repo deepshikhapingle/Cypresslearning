@@ -1,5 +1,21 @@
 {
   "devDependencies": {
-    "cypress": "^13.1.0"
+    "cypress": "^13.1.0",
+    "cypress-iframe": "^1.0.1"
+  },
+  "scripts": {
+    "staging": "npx cypress open --config baseUrl= https://staging.cypress.com"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "@cypress/browserify-preprocessor": "^3.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true
+    },
+    "e2e": {
+      "stepDefinitions": "cypress/e2e/BDD/step_definition/*.js"
+    }
   }
 }
