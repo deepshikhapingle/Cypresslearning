@@ -1,0 +1,10 @@
+{
+    "name": "Deepshikha",
+    "lastname": "Pingle",
+    "companyname": "Incubyte",
+    "email": "deepshikha@cypress.io",
+    "number": 88888888,
+    "Address": "abc",
+    "body": "Fixtures are a great way to mock data for responses to routes",
+    "position": "QA"
+}

@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "allure-cypress": "^2.15.0",
     "cypress": "^13.1.0",
     "cypress-iframe": "^1.0.1"
   },
@@ -8,7 +9,8 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
-    "@cypress/browserify-preprocessor": "^3.0.2"
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "allure-commandline": "^2.27.0"
   },
   "cypress-cucumber-preprocessor": {
     "json": {

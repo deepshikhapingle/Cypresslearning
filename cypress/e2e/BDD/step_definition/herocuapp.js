@@ -23,4 +23,4 @@ When("User enters {string} and {string}", (user, pass) => {
 });
 Then("Message displayed {string}", (message) => {
     cy.get("#flash").should("contain", message);
-});
+}); 

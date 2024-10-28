@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const { allureCypress } = require("allure-cypress/reporter");
 
 const {
   addCucumberPreprocessorPlugin,
@@ -12,6 +13,9 @@ async function setupNodeEvents(on, config) {
   await addCucumberPreprocessorPlugin(on, config);
 
   on("file:preprocessor", preprocessor(config));
+  allureCypress(on, {
+    resultsDir: "./allure-results",
+  });
 
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
@@ -30,7 +34,7 @@ module.exports = defineConfig({
     },
     viewportWidth: 1000,
     viewportHeight: 650,
-    pageLoadTimeout: 10000,
+    pageLoadTimeout: 30000,
     defaultCommandTimeout: 6000,
     watchForFileChanges: true // you can false it and it will not load the program automatically after any change, you have to run it manually 
   },
